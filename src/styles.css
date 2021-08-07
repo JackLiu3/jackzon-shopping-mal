@@ -1,11 +1,47 @@
 .App {
   font-family: sans-serif;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 .cart-img {
-  width: 30px;
-  height: 30px;
+  height: 35px;
+  flex-grow: 0;
 }
-.line1 {
+.banner {
   display: flex;
+  align-items: center;
+}
+.title {
+  flex-grow: 1;
+}
+.menus {
+  display: flex;
+}
+.menu-item {
+  width: 90px;
+  border: 1px solid black;
+}
+.menu-item-active {
+  background-color: orange;
+}
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 150px;
+  height: 140px;
+  padding: 5px;
+  margin: 5px;
+}
+.product-name {
+  text-align: center;
+  flex-grow: 1;
+}
+.product-price {
+  text-align: center;
+  flex-grow: 1;
 }
