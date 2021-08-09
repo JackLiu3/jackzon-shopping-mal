@@ -45,3 +45,38 @@
   text-align: center;
   flex-grow: 1;
 }
+.descriptions {
+  display: flex;
+}
+.desc-goods-name {
+  flex: 3 0 300px;
+}
+.desc-goods-price {
+  flex: 1 0 100px;
+}
+.desc-goods-qty {
+  flex: 1 0 100px;
+}
+.desc-goods-amount {
+  flex: 1 0 100px;
+}
+.cart-list {
+  display: flex;
+}
+.item-name {
+  flex: 3 0 300px;
+}
+.item-price {
+  flex: 1 0 100px;
+}
+.item-qty {
+  display: flex;
+  flex: 1 0 100px;
+}
+.item-qty > div {
+  width: 30px;
+  text-align: center;
+}
+.item-amount {
+  flex: 1 0 100px;
+}

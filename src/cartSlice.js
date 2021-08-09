@@ -19,8 +19,21 @@ export const cartSlice = createSlice({
       if (!found) {
         state.cartList.push({ name, qty, price });
       }
+    },
+    addQty: (state, action) => {
+      const { name, qty } = action.payload;
+      const itemIndex = state.cartList.findIndex((o) => o.name === name);
+      state.cartList[itemIndex].qty += qty;
+    },
+    reduceQty: (state, action) => {
+      const { name, qty } = action.payload;
+      const itemIndex = state.cartList.findIndex((o) => o.name === name);
+      state.cartList[itemIndex].qty -= qty;
+      if (state.cartList[itemIndex].qty <= 0) {
+        state.cartList.splice(itemIndex, 1);
+      }
     }
   }
 });
-export const { addProduct } = cartSlice.actions;
+export const { addProduct, addQty, reduceQty } = cartSlice.actions;
 export default cartSlice.reducer;

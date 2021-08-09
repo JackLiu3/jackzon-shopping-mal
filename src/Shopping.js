@@ -1,4 +1,3 @@
-import "./styles.css";
 import { useSelector, useDispatch } from "react-redux";
 import { addProduct } from "./cartSlice";
 
@@ -11,7 +10,7 @@ function ShoppingProduct(props) {
   return (
     <div className="product">
       <div className="product-name">{product.name}</div>
-      <div className="product-price">{product.price}</div>
+      <div className="product-price">${product.price}</div>
       <button onClick={handleAdd}>Add To Cart</button>
     </div>
   );
@@ -24,7 +23,10 @@ function ShoppingList(props) {
       price: 34.99
     },
 
-    { name: "Product 2", price: 66.99 }
+    {
+      name: "Product 2",
+      price: 66.99
+    }
   ];
   return (
     <div className="product-list">
