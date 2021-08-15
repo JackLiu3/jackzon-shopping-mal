@@ -1,6 +1,7 @@
 import "./styles.css";
 import { ShoppingList } from "./Shopping.js";
 import { Cart } from "./Cart";
+import { Products } from "./Products";
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,20 +17,16 @@ export default function App() {
     <Router>
       <div className="App">
         <Banner />
-        <div className="menus">
-          <div className="menu-item">
-            <NavLink to="/shopping">Shopping</NavLink>
-          </div>
-          <div className="menu-item">
-            <NavLink to="/cart">Cart</NavLink>
-          </div>
-        </div>
+        <Menus />
         <Switch>
           <Route exact path="/shopping">
             <ShoppingList />
           </Route>
           <Route exact path="/cart">
             <Cart />
+          </Route>
+          <Route exact path="/products">
+            <Products />
           </Route>
           <Redirect to="/shopping" />
         </Switch>
@@ -51,6 +48,21 @@ function Banner(props) {
         <img className="cart-img" src="images/cart.png" alt="cart" />
       </div>
       <div>{inCartItems}</div>
+    </div>
+  );
+}
+function Menus(props) {
+  return (
+    <div className="menus">
+      <div className="menu-item">
+        <NavLink to="/shopping">Shopping</NavLink>
+      </div>
+      <div className="menu-item">
+        <NavLink to="/cart">Cart</NavLink>
+      </div>
+      <div className="menu-item">
+        <NavLink to="/products">Products</NavLink>
+      </div>
     </div>
   );
 }

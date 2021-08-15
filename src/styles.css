@@ -57,9 +57,6 @@
 .desc-goods-qty {
   flex: 1 0 100px;
 }
-.desc-goods-amount {
-  flex: 1 0 100px;
-}
 .cart-list {
   display: flex;
 }
@@ -77,6 +74,26 @@
   width: 30px;
   text-align: center;
 }
-.item-amount {
-  flex: 1 0 100px;
+.total-line {
+  flex: 5 0 500px;
+  text-align: right;
+}
+.products-page {
+  display: flex;
+  flex-direction: column;
+}
+.products {
+  display: flex;
+  flex-direction: column;
+}
+.product-listv2 {
+  display: flex;
+}
+.item-actions {
+  flex: 1 0 150px;
+}
+.action-button {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
 }
