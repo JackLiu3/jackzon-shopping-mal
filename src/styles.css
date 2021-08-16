@@ -97,3 +97,13 @@
   margin: 5px;
   border-radius: 10px;
 }
+.editor {
+  display: flex;
+  flex-direction: column;
+}
+.product-editor-inside {
+  display: flex;
+}
+.product-editor-really-inside {
+  flex: 1 0 170px;
+}
